@@ -1,4 +1,4 @@
-const Result = require('../build/Result.js');
+import Result from '../src/Result';
 
 describe('the Left class', () => {
     it('can create instances', () => {
