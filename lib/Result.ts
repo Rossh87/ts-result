@@ -60,4 +60,4 @@ class Right<T> implements IResult<T> {
     }
 }
 
-module.exports = Result;
+export default Result;
