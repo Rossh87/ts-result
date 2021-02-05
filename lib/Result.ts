@@ -10,7 +10,7 @@ interface IResult<T> {
     fold(): T;
 }
 
-export class Result {
+class Result {
     static left<E extends Error = Error>(v: E) {
         return new Left<E>(v);
     }
@@ -24,7 +24,7 @@ export class Result {
     }
 }
 
-export class Left<E> implements IResult<E> {
+class Left<E> implements IResult<E> {
     public isLeft: boolean;
     public isRight: boolean;
 
@@ -42,7 +42,7 @@ export class Left<E> implements IResult<E> {
     }
 }
 
-export class Right<T> implements IResult<T> {
+class Right<T> implements IResult<T> {
     public isRight: boolean;
     public isLeft: boolean;
 
@@ -59,3 +59,5 @@ export class Right<T> implements IResult<T> {
         return this.value;
     }
 }
+
+module.exports = Result;
