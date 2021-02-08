@@ -3,7 +3,7 @@ interface IResult<T> {
     ok(): boolean;
     fold(): T;
 }
-declare class Result {
+export declare class Result {
     static left<E extends Error = Error>(v: E): Left<E>;
     static right<T>(v: T): Right<T>;
     static ok<E, T>(v: Either<E, T>): v is Right<T>;
@@ -24,4 +24,4 @@ declare class Right<T> implements IResult<T> {
     ok(): boolean;
     fold(): T;
 }
-export default Result;
+export {};

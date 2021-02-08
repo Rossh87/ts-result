@@ -6,7 +6,7 @@ interface IResult<T> {
     fold(): T;
 }
 
-class Result {
+export class Result {
     static left<E extends Error = Error>(v: E) {
         return new Left<E>(v);
     }
@@ -55,5 +55,3 @@ class Right<T> implements IResult<T> {
         return this.value;
     }
 }
-
-export default Result;

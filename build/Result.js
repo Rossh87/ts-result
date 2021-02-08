@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Result = void 0;
 var Result = /** @class */ (function () {
     function Result() {
     }
@@ -14,6 +15,7 @@ var Result = /** @class */ (function () {
     };
     return Result;
 }());
+exports.Result = Result;
 var Left = /** @class */ (function () {
     function Left(error) {
         this.error = error;
@@ -42,4 +44,3 @@ var Right = /** @class */ (function () {
     };
     return Right;
 }());
-exports.default = Result;
