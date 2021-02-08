@@ -1,9 +1,5 @@
 // Note: this is a loose implementation of an Either type, and may not obey functor laws in every case
-type Either<E, A> = E | A;
-
-interface IMapper<A, B> {
-    (a: A): B;
-}
+export type Either<E, T> = Left<E> | Right<T>;
 
 interface IResult<T> {
     ok(): boolean;
@@ -19,7 +15,7 @@ class Result {
         return new Right<T>(v);
     }
 
-    static ok<E, T>(v: Either<Left<E>, Right<T>>): v is Right<T> {
+    static ok<E, T>(v: Either<E, T>): v is Right<T> {
         return v.ok();
     }
 }

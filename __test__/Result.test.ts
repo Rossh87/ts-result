@@ -1,6 +1,6 @@
 import Result from '../src/Result';
 
-describe('the Left class', () => {
+describe('the Result class', () => {
     it('can create instances', () => {
         const instance = Result.left(new Error());
 
