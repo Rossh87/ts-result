@@ -20,7 +20,7 @@ export class Result {
     }
 }
 
-class Left<E> implements IResult<E> {
+export class Left<E> implements IResult<E> {
     public isLeft: boolean;
     public isRight: boolean;
 
@@ -38,7 +38,7 @@ class Left<E> implements IResult<E> {
     }
 }
 
-class Right<T> implements IResult<T> {
+export class Right<T> implements IResult<T> {
     public isRight: boolean;
     public isLeft: boolean;
 

@@ -8,7 +8,7 @@ export declare class Result {
     static right<T>(v: T): Right<T>;
     static ok<E, T>(v: Either<E, T>): v is Right<T>;
 }
-declare class Left<E> implements IResult<E> {
+export declare class Left<E> implements IResult<E> {
     private error;
     isLeft: boolean;
     isRight: boolean;
@@ -16,7 +16,7 @@ declare class Left<E> implements IResult<E> {
     ok(): boolean;
     fold(): E;
 }
-declare class Right<T> implements IResult<T> {
+export declare class Right<T> implements IResult<T> {
     value: T;
     isRight: boolean;
     isLeft: boolean;
