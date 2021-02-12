@@ -1,6 +1,6 @@
 {
   "name": "ts-result",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "typescript-native package for functional-style results and error handling",
   "main": "build/index.js",
   "repository": "https://github.com/Rossh87/ts-result",
